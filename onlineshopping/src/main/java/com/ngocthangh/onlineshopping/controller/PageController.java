@@ -10,7 +10,24 @@ public class PageController {
 	@RequestMapping(value = {"/", "/home", "/index"})
 	public ModelAndView index(){
 		ModelAndView mv = new ModelAndView("page");
-		mv.addObject("greeting", "Welcome to ngocthangh web MVC!!!");
+		mv.addObject("title", "Home");
+		mv.addObject("userClickHome", true);
+		return mv;
+	}
+	
+	@RequestMapping(value = "about")
+	public ModelAndView about(){
+		ModelAndView mv = new ModelAndView("page");
+		mv.addObject("title", "About Us");
+		mv.addObject("userClickAbout", true);
+		return mv;
+	}
+	
+	@RequestMapping(value = "contact")
+	public ModelAndView contact(){
+		ModelAndView mv = new ModelAndView("page");
+		mv.addObject("title", "Contact Us");
+		mv.addObject("userClickContact", true);
 		return mv;
 	}
 //	@RequestMapping(value="/test")
@@ -22,13 +39,13 @@ public class PageController {
 //		mv.addObject("greeting", greeting);
 //		return mv;
 //	}
-	@RequestMapping(value="/test/{greeting}")
-	public ModelAndView test(@PathVariable("greeting")String greeting){
-		if(greeting == null){
-			greeting = "Hello this is default greeting!!!";
-		}
-		ModelAndView mv = new ModelAndView("page");
-		mv.addObject("greeting", greeting);
-		return mv;
-	}
+//	@RequestMapping(value="/test/{greeting}")
+//	public ModelAndView test(@PathVariable("greeting")String greeting){
+//		if(greeting == null){
+//			greeting = "Hello this is default greeting!!!";
+//		}
+//		ModelAndView mv = new ModelAndView("page");
+//		mv.addObject("greeting", greeting);
+//		return mv;
+//	}
 }
