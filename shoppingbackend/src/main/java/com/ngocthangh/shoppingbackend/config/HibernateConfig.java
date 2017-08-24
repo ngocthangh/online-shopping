@@ -6,6 +6,10 @@ import javax.sql.DataSource;
 
 import org.apache.commons.dbcp2.BasicDataSource;
 import org.hibernate.SessionFactory;
+import org.hibernate.boot.Metadata;
+import org.hibernate.boot.MetadataSources;
+import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
+import org.hibernate.service.ServiceRegistry;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
@@ -18,12 +22,20 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 @EnableTransactionManagement
 public class HibernateConfig {
 	// Change the below based on the DBMS you choose
-	private final static String DATABASE_URL  = "jdbc:h2:tcp://localhost/~/onlineshopping";
-	private final static String DATABASE_DRIVER  = "org.h2.Driver";
-	private final static String DATABASE_DIALECT  = "org.hibernate.dialect.H2Dialect";
+//	private final static String DATABASE_URL  = "jdbc:h2:tcp://localhost/~/onlineshopping";
+//	private final static String DATABASE_DRIVER  = "org.h2.Driver";
+//	private final static String DATABASE_DIALECT  = "org.hibernate.dialect.H2Dialect";
+//	private final static String DATABASE_USERNAME  = "sa";
+//	private final static String DATABASE_PASSWORD  = "";
+	
+	// Change the below based on the DBMS you choose
+	private final static String DATABASE_URL  = "jdbc:jtds:sqlserver://localhost:1433/onlineshopping;instance=SQLEXPRESS";
+	private final static String DATABASE_DRIVER  = "net.sourceforge.jtds.jdbc.Driver";
+	private final static String DATABASE_DIALECT  = "org.hibernate.dialect.SQLServerDialect";
 	private final static String DATABASE_USERNAME  = "sa";
-	private final static String DATABASE_PASSWORD  = "";
+	private final static String DATABASE_PASSWORD  = "123456";
 
+	
 	// dataSource bean will be available
 	@Bean
 	public DataSource getDataSource(){
@@ -33,6 +45,7 @@ public class HibernateConfig {
 		dataSource.setUrl(DATABASE_URL);
 		dataSource.setUsername(DATABASE_USERNAME);
 		dataSource.setPassword(DATABASE_PASSWORD);
+		dataSource.setValidationQuery("select 1"); 
 		return dataSource;
 	}
 	// dataSource bean will be available

@@ -53,6 +53,6 @@ public class CategoryTestCase {
 	
 	@Test
 	public void testListCategory(){
-		assertEquals("Successfully get list categorys", 1, categoryDAO.list().size());
+		assertEquals("Successfully get list categorys", 4, categoryDAO.list().size());
 	}
 }

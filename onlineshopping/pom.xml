@@ -45,7 +45,7 @@
 			<version>${spring-version}</version>
 		</dependency>
 
-		<!-- SPRING -->
+		<!-- JSTL -->
 		<dependency>
 			<groupId>jstl</groupId>
 			<artifactId>jstl</artifactId>

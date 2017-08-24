@@ -21,8 +21,6 @@ public class Category {
 	@Column(name="is_active")
 	private boolean active = true;
 	
-	
-	
 	@Override
 	public String toString() {
 		return "Category [id=" + id + ", name=" + name + ", description="
