@@ -7,7 +7,8 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.Transient;
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 @Entity
 public class Product {
@@ -22,7 +23,7 @@ public class Product {
 	private String name;
 //	@NotBlank(message = "Please enter the Brand Name!")
 	private String brand;
-//	@JsonIgnore
+	@JsonIgnore
 //	@NotBlank(message = "Please enter the description for Product!")
 	private String description;
 	@Column(name = "unit_price")
@@ -32,10 +33,10 @@ public class Product {
 	@Column(name = "is_active")
 	private boolean active;
 	@Column(name = "category_id")
-//	@JsonIgnore
+	@JsonIgnore
 	private int categoryId;
 	@Column(name = "supplier_id")
-//	@JsonIgnore
+	@JsonIgnore
 	private int supplierId;
 	private int purchases;
 	private int views;
