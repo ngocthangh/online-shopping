@@ -21,6 +21,7 @@
 <title>Online Shopping - ${title}</title>
 <script>
 	window.menu = '${title}';
+	window.contextRoot = '${contextRoot}';
 </script>
 <!-- Bootstrap Core CSS -->
 <link href="${css}/bootstrap.min.css" rel="stylesheet">
@@ -58,6 +59,9 @@
 			<c:if test="${userClickAllProducts == true or userClickCategoryProducts == true}">
 				<%@include file="listProducts.jsp"%>
 			</c:if>
+			<c:if test="${userClickShowProduct == true}">
+				<%@include file="singleProduct.jsp"%>
+			</c:if>
 		</div>
 		
 		<!-- Footer -->
@@ -72,6 +76,7 @@
 		
 		<!-- Data Table -->
 		<script src="${js}/jquery.dataTables.js"></script>
+		<script src="${js}/dataTables.bootstrap.js"></script>
 		
 		<script src="${js}/myapp.js"></script>
 	</div>

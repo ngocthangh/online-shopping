@@ -22,18 +22,18 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 @EnableTransactionManagement
 public class HibernateConfig {
 	// Change the below based on the DBMS you choose
-//	private final static String DATABASE_URL  = "jdbc:h2:tcp://localhost/~/onlineshopping";
-//	private final static String DATABASE_DRIVER  = "org.h2.Driver";
-//	private final static String DATABASE_DIALECT  = "org.hibernate.dialect.H2Dialect";
-//	private final static String DATABASE_USERNAME  = "sa";
-//	private final static String DATABASE_PASSWORD  = "";
+//	private final static String DATABASE_URL  = "jdbc:jtds:sqlserver://ngocthang.database.windows.net:1433/HoaBinh;instance=SQLEXPRESS";
+//	private final static String DATABASE_DRIVER  = "net.sourceforge.jtds.jdbc.Driver";
+//	private final static String DATABASE_DIALECT  = "org.hibernate.dialect.SQLServerDialect";
+//	private final static String DATABASE_USERNAME  = "ngocthang";
+//	private final static String DATABASE_PASSWORD  = "root@123";
 	
 	// Change the below based on the DBMS you choose
 	private final static String DATABASE_URL  = "jdbc:jtds:sqlserver://localhost:1433/onlineshopping;instance=SQLEXPRESS";
 	private final static String DATABASE_DRIVER  = "net.sourceforge.jtds.jdbc.Driver";
 	private final static String DATABASE_DIALECT  = "org.hibernate.dialect.SQLServerDialect";
 	private final static String DATABASE_USERNAME  = "sa";
-	private final static String DATABASE_PASSWORD  = "root@123";
+	private final static String DATABASE_PASSWORD  = "123456";
 
 	
 	// dataSource bean will be available
