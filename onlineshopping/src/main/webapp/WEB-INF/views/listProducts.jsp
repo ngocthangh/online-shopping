@@ -40,7 +40,7 @@
 							class="table table-striped table-bordered">
 							<thead>
 								<tr>
-									<th></th>
+									<th>&#160;</th>
 									<th>Name</th>
 									<th>Brand</th>
 									<th>Price</th>
@@ -50,7 +50,7 @@
 							</thead>
 							<tfoot>
 								<tr>
-									<th></th>
+									<th>&#160;</th>
 									<th>Name</th>
 									<th>Brand</th>
 									<th>Price</th>

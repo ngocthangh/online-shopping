@@ -27,8 +27,8 @@
 <link href="${css}/bootstrap.min.css" rel="stylesheet">
 
 <!-- Custom CSS -->
-<link href="${css}/myapp.css" rel="stylesheet">
 <link href="${css}/bootstrap-readable-theme.css" rel="stylesheet">
+<link href="${css}/myapp.css" rel="stylesheet">
 <link href="${css}/dataTables.bootstrap.css" rel="stylesheet">
 <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
 <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -62,6 +62,9 @@
 			<c:if test="${userClickShowProduct == true}">
 				<%@include file="singleProduct.jsp"%>
 			</c:if>
+			<c:if test="${userClickManageProducts == true}">
+				<%@include file="manageProducts.jsp"%>
+			</c:if>
 		</div>
 		
 		<!-- Footer -->
@@ -79,6 +82,8 @@
 		<script src="${js}/dataTables.bootstrap.js"></script>
 		
 		<script src="${js}/myapp.js"></script>
+		<script src="${js}/bootbox.min.js"></script>
+		<script src="${js}/jquery.validate.js"></script>
 	</div>
 </body>
 
